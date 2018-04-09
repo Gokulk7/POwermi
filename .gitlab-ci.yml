@@ -18,6 +18,7 @@ Build:
     - sh script.sh
 
 Test:
+    stage: Testing
     script:
     - sh Test.sh
 
