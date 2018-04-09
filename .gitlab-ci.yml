@@ -13,12 +13,12 @@
 #  script:
 #    - bundle exec rubocop
 
-Build:
+Build-Job:
     script:
     - sh script.sh
 
-Test:
-    stage: Testing
+Test-Job:
+    stage: Test
     script:
     - sh Test.sh
 
