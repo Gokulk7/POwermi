@@ -17,6 +17,7 @@ stages:
   - build
   - test
   - package
+  - unittest
 
   
 Build-Job:
@@ -28,6 +29,11 @@ Test-Job:
     stage: test
     script:
     - sh Test.sh
+    
+unittest:
+    stage: unittest
+    script:
+    - sh unittest.sh
 
 package:
     stage: package
