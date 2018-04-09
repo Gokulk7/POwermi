@@ -17,6 +17,7 @@ stages:
   - build
   - test
   - package
+  - artifacts
   
 Build-Job:
     stage: build
@@ -32,3 +33,7 @@ package:
     stage: package
     script: echo "packageing" > file.zip
 
+artifacts:
+    paths:
+    - file.zip
+    expire_in: 1 week
