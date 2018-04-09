@@ -13,7 +13,13 @@
 #  script:
 #    - bundle exec rubocop
 
+stages:
+  - build
+  - test
+  - package
+  
 Build-Job:
+    stage: build
     script:
     - sh script.sh
 
@@ -21,4 +27,8 @@ Test-Job:
     stage: test
     script:
     - sh Test.sh
+
+package:
+    stage: package
+    script: echo "packageing" > file.zip
 
